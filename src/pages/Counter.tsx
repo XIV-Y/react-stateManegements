@@ -1,11 +1,19 @@
 import useCounter from "../hooks/useCounter";
+import { useTheme } from "../hooks/useTheme";
 
 function Counter() {
+  const themeContext = useTheme();
+
   const { state, dispatch } = useCounter();
 
   return (
     <div>
       <h1>useReducer</h1>
+
+      <div>Mode: {themeContext.darkMode ? "Dark" : "Light"}</div>
+      <button onClick={themeContext.toggleTheme}>
+        {themeContext.darkMode ? "Dark" : "Light"}
+      </button>
 
       <div>
         <h2>カウント: {state.count}</h2>
