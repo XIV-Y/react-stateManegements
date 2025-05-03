@@ -1,11 +1,11 @@
 import { Routes, Route } from "react-router-dom";
-import About from "./pages/About";
+import Counter from "./pages/Counter";
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<h1>Hello!</h1>} />
-      <Route path="/about" element={<About />} />
+      <Route path="/counter" element={<Counter />} />
     </Routes>
   );
 }
